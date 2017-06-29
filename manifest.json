@@ -12,16 +12,18 @@
   "permissions": [
     "download",
     "tabs",
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
 
   "browser_action": {
     "default_icon": "telegram32.png",
     "default_title": "Send link telegram"
   },
-
+  "options_ui": {
+    "page": "options.html"
+  },
   "background": {
     "scripts": ["sendtotelegram.js"]
   }
-
 }
