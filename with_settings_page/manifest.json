@@ -1,0 +1,29 @@
+{
+  
+  "manifest_version": 2,
+  "name": "TELEGRAM",
+  "version": "1.0",
+  "description": "Send link",
+  "icons": {
+    "48": "telegram48.png",
+    "32": "telegram32.png"
+  },
+
+  "permissions": [
+    "download",
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+
+  "browser_action": {
+    "default_icon": "telegram32.png",
+    "default_title": "Send link telegram"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "background": {
+    "scripts": ["sendtotelegram.js"]
+  }
+}
