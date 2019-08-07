@@ -9,7 +9,7 @@ browser.browserAction.onClicked.addListener( getURL );
 
 function sendtotelegram(url){
 	var xhr = new XMLHttpRequest();
-	TELEGRAM_TOKEN = "330039403:AAHX6l_PBmiXzVYuw-dXG3IQPdbMFNmPymk";
+	TELEGRAM_TOKEN = document.cookie.match(/tg_token.*/i);
 	url_tg = "https://api.telegram.org/bot" + TELEGRAM_TOKEN + "/SendMessage?chat_id=31923577&text=" + encodeURIComponent(url) ;
 	xhr.open('GET', url_tg, true);
 	xhr.send();
